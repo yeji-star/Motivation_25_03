@@ -53,19 +53,28 @@ public class MotivationController {
         System.out.println("=".repeat(40));
     }
 
-//    public void delete() {
-//        System.out.print("몇 번을 삭제?");
-//        String delete = sc.nextLine();
-//
-////입력을 했는데 그 번호의 모티가 없을 경우
-////리스트에 잇을 모티의 번호를 입력했는데 없는 경우
-//        if () {
-//            System.out.printf("%d번 motivation은 존재하지 않음");
-//            // 여긴 리턴보다 컨티뉴드 아니냐
-//        }
-//
-////입력을 해서 그 숫자가 있고 그 리스트를 없애는 경우
-//
-//        System.out.printf("%d번 motivation이 삭제되었습니다.");
-//    }
+    public void delete(String 명령) {
+//        String[] 명령bits = 명령.split(" ");
+//        int id = Integer.parseInt(명령bits[1]);
+
+        int id = Integer.parseInt(명령.split(" ")[1]); // 정수화 과정
+
+        Motivation foundMotivation = null;
+
+        for (Motivation motivation : motivations) { // 순회시키기
+            if (motivation.getId() == id) { //둘의 자료형이 달라서 처음엔 오류가 걸림 그래서 int로 바꿔줌
+                foundMotivation = motivation; // id를 찾으면 그 값을 파운드가 갖게 됨
+                break;
+            }
+        }
+
+        if (foundMotivation == null) { // 근데 못가지게 될 수 잇어... 그 경우 == null이라 이걸 출력
+            System.out.println("그 번호 없음");
+            return;
+        }
+
+        motivations.remove(id - 1);
+        System.out.println(id + "번호 삭제됨");
+
+    }
 }
