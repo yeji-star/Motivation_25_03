@@ -73,7 +73,7 @@ public class MotivationController {
             return;
         }
 
-        motivations.remove(id - 1);
+        motivations.remove(foundMotivation);
         System.out.println(id + "번호 삭제됨");
 
     }
