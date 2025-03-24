@@ -7,21 +7,16 @@ import java.util.Scanner;
 
 public class App {
 
-    private Scanner sc;
-
-    public App(Scanner sc) {
-        this.sc = sc;
-    }
 
     public void run() {
         System.out.println("==motivation 실행==");
 
         SystemController systemController = new SystemController();
-        MotivationController motivationController = new MotivationController(sc);
+        MotivationController motivationController = new MotivationController();
 
         while (true) {
             System.out.print("사용자 입력 :  ");
-            String 명령 = sc.nextLine();
+            String 명령 = container.getScanner().nextLine();
             if (명령.equals("종료")) {
                 systemController.exit();
                 break;

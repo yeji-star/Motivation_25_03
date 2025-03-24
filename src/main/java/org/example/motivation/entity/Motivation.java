@@ -1,5 +1,10 @@
 package org.example.motivation.entity;
 
+import java.util.Scanner;
+import java.util.*;
+
+import static org.example.container.sc;
+
 public class Motivation {
 
     private int id;

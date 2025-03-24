@@ -1,29 +1,23 @@
 package org.example.motivation.controller;
 
+import org.example.container;
 import org.example.motivation.entity.Motivation;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 
 public class MotivationController {
 
     int lastId = 0;
 
     List<Motivation> motivations = new ArrayList<>();
-    Scanner sc;
-
-    public MotivationController(Scanner sc) {
-        this.sc = sc;
-    }
 
     public void add() {
 
         int id = lastId + 1;
         System.out.print("body : ");
-        String body = sc.nextLine();
+        String body = container.getScanner().nextLine();
         System.out.print("소스 : ");
-        String 소스 = sc.nextLine();
+        String 소스 = container.getScanner().nextLine();
 
         Motivation motivation = new Motivation(id, body, 소스);
 
