@@ -1,10 +1,7 @@
 package org.example.motivation.entity;
 
-import java.util.Scanner;
-import java.util.*;
-
-import static org.example.container.sc;
-
+// 개념의 추상화 
+//moti 컨트롤러가 다뤄야하는 객체, 데이터
 public class Motivation {
 
     private int id;

@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class App {
 
-
+//주체가 누군지 파악
     public void run() {
         System.out.println("==motivation 실행==");
 
@@ -17,7 +17,8 @@ public class App {
         while (true) {
             System.out.print("사용자 입력 :  ");
             String 명령 = container.getScanner().nextLine();
-            if (명령.equals("종료")) {
+
+            if (명령.equals("종료")) { // 예외 기능
                 systemController.exit();
                 break;
             } else if (명령.length() == 0) {
@@ -25,7 +26,7 @@ public class App {
                 continue;
             }
 
-            if (명령.equals("add")) {
+            if (명령.equals("add")) { // 길안내 (라우팅) 역할
                 motivationController.add();
             } else if (명령.equals("list")) {
                 motivationController.list();

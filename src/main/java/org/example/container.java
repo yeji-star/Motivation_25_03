@@ -2,6 +2,7 @@ package org.example;
 
 import java.util.Scanner;
 
+//공유 자원 관리자
 public class container {
     public static Scanner sc;
 
