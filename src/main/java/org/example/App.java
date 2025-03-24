@@ -34,6 +34,8 @@ public class App {
                 motivationController.add();
             } else if (명령.equals("list")) {
                 motivationController.list();
+            } else if (명령.startsWith("delete?")) {
+                motivationController.delete2(명령);
             } else if (명령.startsWith("delete")) {
                 motivationController.delete(명령);
             } else {
