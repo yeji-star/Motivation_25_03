@@ -33,6 +33,8 @@ public class App {
                 motivationController.delete2(명령);
             } else if (명령.startsWith("delete")) {
                 motivationController.delete(명령);
+            } else if (명령.startsWith("edit")) {
+                motivationController.edit(명령);
             } else {
                 System.out.println("사용 불가. 다시 입력하세요.");
                 continue;
